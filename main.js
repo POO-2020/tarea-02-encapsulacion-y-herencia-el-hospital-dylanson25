@@ -23,8 +23,14 @@ class Main {
       telefono: 3123454367
     }
     this.paciente1 = new Paciente(p_1);
-
-    this.doctor = new Doctor(this.nombre2, 'Cardiólogo', 3125677896, 445566);
+    let doc_1 = {
+      nombre: this.nombre2,
+      especialidad: 'cardiologo',
+      telefono: 3121319198,
+      cedula: 4543463
+    }
+    this.doctor = new Doctor(doc_1)
+    //this.doctor = new Doctor(this.nombre2, 'Cardiólogo', 3125677896, 445566);
 
     let c_1 = {
       fecha: this.fecha,
