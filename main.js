@@ -26,7 +26,14 @@ class Main {
 
     this.doctor = new Doctor(this.nombre2, 'Cardiólogo', 3125677896, 445566);
 
-    this.cita = new Cita(this.fecha, this.tiempo1, this.doctor, this.paciente1);
+    let c_1 = {
+      fecha: this.fecha,
+      hora: this.tiempo1,
+      doctor: this.doctor,
+      paciente: this.paciente1
+    } 
+    this.cita = new Cita(c_1)
+    //this.cita = new Cita(this.fecha, this.tiempo1, this.doctor, this.paciente1);
 
     this.hospital = new Hospital('Puerta de Hierro', 'Av. Constitución 100');
   }
