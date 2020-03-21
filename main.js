@@ -41,7 +41,12 @@ class Main {
     this.cita = new Cita(c_1)
     //this.cita = new Cita(this.fecha, this.tiempo1, this.doctor, this.paciente1);
 
-    this.hospital = new Hospital('Puerta de Hierro', 'Av. Constitución 100');
+    let hos_1 = {
+      nombre:'puerta de hierro',
+      direccion: 'Av. Constitución 100'
+    }
+    this.hospital = new Hospital(hos_1)
+    //this.hospital = new Hospital('Puerta de Hierro', 'Av. Constitución 100');
   }
 
   probarTiempo() {

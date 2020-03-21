@@ -1,6 +1,6 @@
 import Fecha from './fecha.js';
 import Tiempo from './Tiempo.js';
-import Nombre from './Nombre.js';
+import Nombre from './nombre.js';
 import Paciente from './paciente.js';
 import Doctor from './doctor.js';
 import Cita from './cita.js';
@@ -10,7 +10,7 @@ export default class Hospital {
    * @param {string} nombre
    * @param {string} direccion
    */
-  constructor(nombre, direccion) {
+  constructor({nombre, direccion}) {
     this.nombre = nombre;
     this.direccion = direccion;
     this.doctores = new Array();
