@@ -18,7 +18,9 @@ export default class Nombre {
   getApellidoNombre() {
     return `${this._apellidoPaterno} ${this._apellidoMaterno} ${this._nombre}`;
   }
-
+  getApellidoPaterno(){
+     return `${this._nombre} ${this._apellidoPaterno}`; 
+  }
   getIniciales() {
     return `${this._nombre[0]}${this._apellidoPaterno[0]}${this._apellidoMaterno[0]}`;
   }
