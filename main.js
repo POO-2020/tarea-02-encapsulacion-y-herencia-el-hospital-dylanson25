@@ -1,4 +1,4 @@
-import Nombre from './Nombre.js';
+import Nombre from './nombre.js';
 import Tiempo from './tiempo.js';
 import Fecha from './fecha.js';
 import Doctor from './doctor.js';
@@ -16,11 +16,17 @@ class Main {
     this.nombre = new Nombre('Juan', 'Pérez', 'Díaz');
     this.nombre2 = new Nombre('María', 'Ramos', 'Ramírez');
 
-    this.paciente = new Paciente(this.nombre, this.fecha, 3123454367);
+    //this.paciente = new Paciente(this.nombre, this.fecha, 3123454367);
+    let p_1 = {
+      nombre: this.nombre,
+      fechaNacimiento: this.fecha,
+      telefono: 3123454367
+    }
+    this.paciente1 = new Paciente(p_1);
 
     this.doctor = new Doctor(this.nombre2, 'Cardiólogo', 3125677896, 445566);
 
-    this.cita = new Cita(this.fecha, this.tiempo1, this.doctor, this.paciente);
+    this.cita = new Cita(this.fecha, this.tiempo1, this.doctor, this.paciente1);
 
     this.hospital = new Hospital('Puerta de Hierro', 'Av. Constitución 100');
   }
@@ -48,7 +54,7 @@ class Main {
   }
 
   probarPaciente() {
-    console.log(this.paciente.getPerfil());
+    console.log(this.paciente1.getPerfil());
   }
 
   probarDoctor() {

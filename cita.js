@@ -10,16 +10,16 @@ export default class cita {
    * @param {Doctor} doctor
    * @param {Paciente} paciente
    */
-  constructor(fecha, hora, doctor, paciente) {
-    this.fecha = fecha;
-    this.hora = hora;
-    this.doctor = doctor;
-    this.paciente = paciente;
+  constructor(fecha, hora, doctor, paciente1) {
+    this._fecha = fecha;
+    this._hora = hora;
+    this._doctor = doctor;
+    this._paciente = paciente1;
   }
 
   getCita() {
-    return `${this.fecha.getFecha()}, ${this.hora.getFormato24()}, Dr. ${
-      this.doctor.nombre.apellidoPaterno
-    }, ${this.paciente.nombre.getNombreCompleto()}`;
+    return `${this._fecha.getFecha()}, ${this._hora.getFormato24()}, Dr. ${
+      this._doctor.getNombreDoctor()}, 
+      ${this._paciente.getNombrePaciente()}`;
   }
 }
