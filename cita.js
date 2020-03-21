@@ -10,11 +10,11 @@ export default class cita {
    * @param {Doctor} doctor
    * @param {Paciente} paciente
    */
-  constructor(fecha, hora, doctor, paciente1) {
+  constructor({fecha, hora, doctor, paciente}) {
     this._fecha = fecha;
     this._hora = hora;
     this._doctor = doctor;
-    this._paciente = paciente1;
+    this._paciente = paciente;
   }
 
   getCita() {
